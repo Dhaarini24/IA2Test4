@@ -1,1 +1,70 @@
-
+Breakpoint 1, main () at p1final.c:37
+37    x= input_radius();
+(gdb) s
+input_radius () at p1final.c:4
+4   {
+(gdb) n
+6     printf("enter the radius of stomach\n");
+(gdb) n
+enter the radius of stomach
+7     scanf("%f",&x);
+(gdb) n
+n
+8     return x;
+(gdb) n
+9   }
+(gdb) n
+main () at p1final.c:38
+38    y=input_heigth();
+(gdb) s
+input_heigth () at p1final.c:11
+11  {
+(gdb) n
+13    printf("enter the height\n");
+(gdb) n
+enter the height
+14    scanf("%f",&y);
+(gdb) n
+n
+15    return y;
+(gdb) n
+16  }
+(gdb) n
+main () at p1final.c:39
+39    z=input_length();
+(gdb) s
+input_length () at p1final.c:18
+18  {
+(gdb) n
+20    printf("enter the length\n");
+(gdb) n
+enter the length
+21    scanf("%f",&z);
+(gdb) n
+n
+22    return z;
+(gdb) n
+23  }
+(gdb) n
+main () at p1final.c:40
+40    weight=find_weight(x,y,z);
+(gdb) s
+find_weight (radius=0, height=0, length=0) at p1final.c:27
+27    weight=M_PI *pow(radius,3) * sqrt(height * length);
+(gdb) n
+28    return weight;
+(gdb) n
+29  }
+(gdb) n
+main () at p1final.c:41
+41    output(x,y,z,weight);
+(gdb) s
+output (radius=0, height=0, length=0, weight=0) at p1final.c:32
+32    printf("the weight of camel is %f",weight);
+(gdb) n
+33  }
+(gdb) n
+main () at p1final.c:42
+42    return 0;
+(gdb) n
+43  }(gdb) 
